@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>PHPInstantViewer</title>
-    <link rel=stylesheet href="lib/assets/style.css" type="text/css">
+    <link rel=stylesheet href="piv/assets/style.css" type="text/css">
 </head>
 <body>
 <h2><?php echo ucwords(str_replace('_', ' ', $table_name)); ?> Data Viewer</h2>
