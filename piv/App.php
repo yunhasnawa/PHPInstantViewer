@@ -55,8 +55,9 @@ class App
         )
         */
 
-        $filterField = $_POST['filter_field'];
-        $filterText = $_POST['filter_text'];
+        // adding filter to prevent sql injection
+        $filterField = $this->filterAlphaNumeric($_POST['filter_field']);
+        $filterText = $this->filterAlphaNumeric($_POST['filter_text']);
 
         if(!empty($filterField))
             $where = " WHERE $filterField = '$filterText'";
@@ -71,5 +72,10 @@ class App
             return $result;
         else
             return null;
+    }
+    
+    // filter input post to prevent sql injection
+    private function filterAlphaNumeric($str = ''){
+        return preg_replace("/[^A-Za-z0-9 _-]/", '', $str);
     }
 }
