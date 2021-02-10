@@ -1,5 +1,7 @@
 <?php
 
+// Copyright(c) 2021 by Yoppy Yunhasnawa
+
 require 'piv/Db.php';
 require 'piv/App.php';
 require 'piv/View.php';
