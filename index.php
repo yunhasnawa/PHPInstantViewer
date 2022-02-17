@@ -10,11 +10,11 @@ use piv\Db;
 use piv\App;
 
 // Change these variables to meet your needs
-$mysqlHost = 'localhost:8889';
+$mysqlHost = 'localhost';
 $user = 'root';
-$password = 'root';
-$dbName = 'si_kerjasama';
-$tableName = 'tb_coop';
+$password = '';
+$dbName = 'toko_barokah';
+$tableName = 'transaksi';
 
 $db = new Db($mysqlHost, $user, $password, $dbName);
 $app = new App($db, $tableName);
